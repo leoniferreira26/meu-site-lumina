@@ -3,49 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site Lumina - Elegância e sofisticação digital">
-    <title>Site Lumina</title>
+    <title>Conecta Horizonte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="app">
+        <section class="login" id="login">
+            <div class="login-card">
+                <header class="login-header">
+                    <div class="brand-icon" aria-hidden="true">CH</div>
+                    <div>
+                        <h1>Conecta Horizonte</h1>
+                        <p>A rede que conecta alunos e professores</p>
+                    </div>
+                </header>
+                <form class="login-form" autocomplete="on">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="nome@escola.com" required>
 
-    <header class="topo">
-        <h1 class="logo">Lumina</h1>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
 
-    <section class="hero">
-        <h2>Brilhe no digital</h2>
-        <p>Design sofisticado, impacto máximo.</p>
-        <a href="#contato" class="btn">Começar agora</a>
-    </section>
+                    <div class="button-group">
+                        <button type="button" class="btn primary" data-role="aluno">Entrar como Aluno</button>
+                        <button type="button" class="btn secondary" data-role="professor">Entrar como Professor</button>
+                    </div>
+                </form>
+                <footer class="login-footer">Conecta Horizonte – Projeto SESI CEFEM</footer>
+            </div>
+            <div class="login-illustration" aria-hidden="true">
+                <div class="glow"></div>
+                <div class="cards">
+                    <article class="preview-card">
+                        <h3>Mentorias ao vivo</h3>
+                        <p>Participe de encontros exclusivos com profissionais e fortaleça sua jornada acadêmica.</p>
+                    </article>
+                    <article class="preview-card">
+                        <h3>Eventos incríveis</h3>
+                        <p>Descubra feiras, projetos e oportunidades promovidas pelos professores e colegas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <section id="sobre" class="conteudo">
-        <h2>Sobre nós</h2>
-        <p>Somos especialistas em criar experiências digitais de alto padrão, com estética refinada e funcionalidade impecável.</p>
-    </section>
+        <section class="feed hidden" id="feed" aria-live="polite">
+            <header class="feed-header">
+                <div class="logo-area">
+                    <div class="logo-icon" aria-hidden="true">CH</div>
+                    <div>
+                        <h2>Conecta Horizonte</h2>
+                        <span>Projeto SESI CEFEM</span>
+                    </div>
+                </div>
+                <nav class="feed-nav" aria-label="Navegação principal">
+                    <a href="#" class="nav-link active">Feed</a>
+                    <a href="#" class="nav-link">Mensagens</a>
+                    <a href="#" class="nav-link">Eventos</a>
+                    <a href="#" class="nav-link">Configurações</a>
+                </nav>
+                <div class="user-actions">
+                    <span class="user-avatar" aria-hidden="true">AL</span>
+                    <button type="button" class="btn tertiary" id="logout">Sair</button>
+                </div>
+            </header>
 
-    <section id="servicos" class="conteudo">
-        <h2>Serviços</h2>
-        <ul>
-            <li>🌟 Design elegante</li>
-            <li>📱 Sites responsivos</li>
-            <li>⚡ Performance otimizada</li>
-        </ul>
-    </section>
+            <main class="feed-content">
+                <aside class="sidebar">
+                    <section class="card highlight">
+                        <h3>Resumo da turma</h3>
+                        <ul>
+                            <li><strong>24</strong> alunos online</li>
+                            <li><strong>08</strong> atividades em andamento</li>
+                            <li><strong>03</strong> eventos esta semana</li>
+                        </ul>
+                    </section>
+                    <section class="card upcoming">
+                        <h3>Próximos eventos</h3>
+                        <article>
+                            <h4>Feira de Ciências</h4>
+                            <p>Sexta-feira, 10h • Auditório</p>
+                        </article>
+                        <article>
+                            <h4>Oficina STEAM</h4>
+                            <p>Segunda, 14h • Laboratório 2</p>
+                        </article>
+                    </section>
+                </aside>
 
-    <section id="contato" class="conteudo">
-        <h2>Contato</h2>
-        <p>Envie um e-mail para <strong>contato@lumina.com</strong> ou fale no WhatsApp.</p>
-    </section>
+                <section class="posts" aria-label="Postagens do feed">
+                    <article class="post-card">
+                        <header>
+                            <div class="avatar teacher" aria-hidden="true">PA</div>
+                            <div>
+                                <h3>Professora Ana</h3>
+                                <span>há 2h • Ciências</span>
+                            </div>
+                            <span class="tag">📌 Aviso</span>
+                        </header>
+                        <p>Feira de Ciências na próxima sexta! Organizem seus experimentos e não esqueçam de trazer os relatórios impressos.</p>
+                        <footer>
+                            <button type="button" class="action">Curtir</button>
+                            <button type="button" class="action">Comentar</button>
+                            <button type="button" class="action">Compartilhar</button>
+                        </footer>
+                    </article>
 
-    <footer>
-        <p>© 2025 Lumina. Todos os direitos reservados.</p>
-    </footer>
+                    <article class="post-card">
+                        <header>
+                            <div class="avatar student" aria-hidden="true">AL</div>
+                            <div>
+                                <h3>Aluno Leoni</h3>
+                                <span>há 4h • Projeto Integrador</span>
+                            </div>
+                            <span class="tag">📸 Projeto</span>
+                        </header>
+                        <p>Grupo de Biologia finalizando banner 👏 Obrigado a todos pela colaboração! Preparados para a apresentação?</p>
+                        <div class="media-placeholder">Prévia do banner do grupo de Biologia</div>
+                        <footer>
+                            <button type="button" class="action">Curtir</button>
+                            <button type="button" class="action">Comentar</button>
+                        </footer>
+                    </article>
+
+                    <article class="post-card">
+                        <header>
+                            <div class="avatar" aria-hidden="true">EV</div>
+                            <div>
+                                <h3>Equipe Eventos</h3>
+                                <span>há 1 dia • Secretaria</span>
+                            </div>
+                            <span class="tag">📢 Aviso</span>
+                        </header>
+                        <p>Inscrições abertas para o Desafio Inovador 2024! Garanta sua vaga até terça-feira e participe do maior desafio interdisciplinar da escola.</p>
+                        <footer>
+                            <button type="button" class="action">Curtir</button>
+                            <button type="button" class="action">Compartilhar</button>
+                        </footer>
+                    </article>
+                </section>
+
+                <aside class="sidebar right">
+                    <section class="card support">
+                        <h3>Precisa de ajuda?</h3>
+                        <p>Envie uma mensagem para a coordenação ou agende uma conversa com seu mentor.</p>
+                        <button type="button" class="btn secondary">Falar com a coordenação</button>
+                    </section>
+                    <section class="card tips">
+                        <h3>Dicas rápidas</h3>
+                        <ul>
+                            <li>Atualize seu perfil com as conquistas recentes.</li>
+                            <li>Compartilhe fotos dos projetos em andamento.</li>
+                            <li>Marque colegas para alcançar toda a turma.</li>
+                        </ul>
+                    </section>
+                </aside>
+            </main>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
